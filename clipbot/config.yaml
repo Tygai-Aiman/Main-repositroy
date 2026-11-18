@@ -1,0 +1,38 @@
+# ---- What to look for -------------------------------------------------------
+search:
+  queries: ["GTA 6 live", "GTA 6 stream", "GTA VI gameplay live"]
+  # Title must contain one of these (case-insensitive) so we only grab GTA 6.
+  title_must_contain: ["gta 6", "gta vi", "gta6", "grand theft auto vi"]
+  # Only streams that ended within this many hours.
+  max_age_hours: 72
+  min_duration_minutes: 30
+  # Don't reuse a streamer for this many days (switch streamers every day).
+  streamer_cooldown_days: 14
+  # Channels to never use (channel IDs).
+  blocklist_channels: []
+
+# ---- Clips ------------------------------------------------------------------
+clips:
+  per_day: 5
+  length_seconds: 35          # Shorts sweet spot
+  skip_first_minutes: 5       # skip "starting soon" screens
+  min_gap_seconds: 180        # moments must be at least this far apart
+  max_swears_per_clip: 4      # more than this = clip skipped (keeps it YouTube-appropriate)
+
+# ---- Posting ----------------------------------------------------------------
+posting:
+  timezone: "America/New_York"
+  times: ["09:00", "12:00", "15:00", "18:00", "21:00"]
+  privacy_after_publish: "public"
+  category_id: "20"            # Gaming
+  tags: ["GTA 6", "GTA VI", "GTA 6 gameplay", "GTA 6 clips", "GTA 6 funny moments",
+         "Grand Theft Auto VI", "Vice City", "GTA 6 live", "Rockstar Games", "shorts", "gaming"]
+  hashtags: ["#GTA6", "#GTAVI", "#shorts", "#gaming"]
+
+# ---- Look -------------------------------------------------------------------
+style:
+  width: 1080
+  height: 1920
+  font: "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"
+  emoji_font: "/usr/share/fonts/truetype/noto/NotoColorEmoji.ttf"
+  whisper_model: "small.en"
